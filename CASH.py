@@ -1,5 +1,5 @@
 for t in range(int(input())):
- 
+
     r=[]
     n,k=input().split()
     n,k=int(n),int(k)
