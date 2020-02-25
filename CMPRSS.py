@@ -24,10 +24,9 @@ for t in range(int(input())):
 				continue
 			else:
 				st.append(start)
-				s+=","+str(start)
+				s+=str(start)+","
 				start=ls[i]				
 				counter=1
 
 		counter+=1
-#	print(st)
 	print(s)
