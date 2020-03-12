@@ -1,22 +1,25 @@
-for t in range(int(input())):
+from sys import stdin,stdout
 
+def countsetbits(n):
+    if n==0:
+        return 0
+    else:
+        return 1+ countsetbits(n&(n-1))
 
-
-    n,q=input().split()
+test=int(stdin.readline())
+for t in range(test):
+    n,q=stdin.readline().split()
     n,q=int(n),int(q)
 
-    a=list(map(int,input().split()))
+    ls=[int(a) for a in stdin.readline().split()]
 
     for i in range(q):
-        qr=int(input())
         e,o=0,0
-
-        for j in a:
-            temp=(j^qr)
-            print(bin(temp))
-
-            if temp.count(1)%2==0:
+        p=int(stdin.readline())
+        for j in range(n):
+            temp=int(countsetbits(p^ls[j]))
+            if temp%2==0:
                 e+=1
             else:
                 o+=1
-        print(e,o)
+        stdout.write(str(e)+" "+str(o)+"\n")

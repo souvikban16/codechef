@@ -3,22 +3,22 @@
 
 using namespace std;
 
-int binary(int x)
+int binary(int n)
 {
-  if (x==1)
+  if(n==0)
   {
     return 1;
   }
-  else
-  {
-    return x%2 + binary(x/2);
+  else{
+    return 1+ binary(n & (n-1));
   }
 }
 
 
+
 int main()
 {
-  int n,q,t,p,e,o;
+  int n,q,t,p,e=0,o=0;
   int a[100000];
   cin>>t;
   for(int test=1;test<=t;test++)
@@ -34,8 +34,7 @@ int main()
 
     for(int i=1;i<=q;i++)
     {
-      e=0;
-      o=0;
+
       cin>>p;
       for(int j=0;j<n;j++)
       {
@@ -44,7 +43,9 @@ int main()
         else
           o++;
       }
-      cout<<e<<' '<<o<<endl;
+      cout<<o<<' '<<e<<endl;
+      e=0;
+      o=0;
 
     }
 
