@@ -2,36 +2,32 @@
 
 using namespace std;
 
+void solve()
+{
+	int r,c;
+	cin>>r>>c;
+	if(r==1 && c==1)
+	{
+		cout<<"23"<<endl;
+		cout<<"3 3\n2 4\n1 3\n3 1\n5 3\n2 6\n1 5\n5 1\n7 3\n2 8\n1 7\n7 1\n8 2\n7 3\n8 4\n4 8\n3 7\n6 4\n8 6\n6 8\n5 7\n6 6\n8 8\n"<<endl;
+	}
+	else
+	{
+		int j=(r+c)/2;
+		cout<<"25"<<endl;
+		cout<<j<<" "<<j<<"\n1 1\n3 3\n2 4\n1 3\n3 1\n5 3\n2 6\n1 5\n5 1\n7 3\n2 8\n1 7\n7 1\n8 2\n7 3\n8 4\n4 8\n3 7\n6 4\n8 6\n6 8\n5 7\n6 6\n8 8\n"<<endl;
+}
+}
+
 int main()
 {
-  int t,r,c;
+  int t;
 
   cin>>t;
-
-  for(int test=1;test<=t;t++)
+  while(t--)
   {
-    cin>>r>>c;
-
-    cout<<"20"<<endl;
-    cout<<"2 2"<<endl;
-    cout<<"1 3"<<endl;
-    cout<<"3 1"<<endl;
-    cout<<"4 2"<<endl;
-    cout<<"1 5"<<endl;
-    cout<<"5 1"<<endl;
-    cout<<"6 2"<<endl;
-    cout<<"1 7"<<endl;
-    cout<<"7 1"<<endl;
-    cout<<"8 2"<<endl;
-    cout<<"2 8"<<endl;
-    cout<<"3 7"<<endl;
-    cout<<"4 8"<<endl;
-    cout<<"8 4"<<endl;
-    cout<<"5 7"<<endl;
-    cout<<"6 8"<<endl;
-    cout<<"8 7"<<endl;
-    cout<<"7 7"<<endl;
-    cout<<"8 8"<<endl;
+	  solve();
   }
-return 0;
+  return 0;
 }
+
