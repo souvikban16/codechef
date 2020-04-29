@@ -2,15 +2,21 @@
 	using namespace std;
 
 	void solve() {
-		
-		int x,k;
-		int counter=0;
+		int k,x;
 		cin>>x>>k;
-		for(int i=2;i<=x;i++){
-			if(x%i==0){
+		int counter=0;
+		while(x%2==0){
+			x=x/2;
+			counter++;
+		}
+		for(int i=3;i*i<=x;i+=2){
+			while(x%i==0){
 				counter++;
+				x=x/i;
 			}
 		}
+		//~ cout<<counter<<endl;
+		if(x>1) counter++;
 		if(counter>=k){
 			cout<<1<<endl;
 		}
